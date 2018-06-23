@@ -1,4 +1,13 @@
 class TreeNode():
+
+    # A basic recursive binary tree structure
+
+    # Time Complexities 
+    # Insertion: upper=O(n), average=Θ(log(n))
+    # Deletion: upper=O(n), average=Θ(log(n))
+    # Search: upper=O(n), average=Θ(log(n))
+    # Index: upper=O(n), average=Θ(log(n))
+
     def __init__(self, data):
         self.data = data
         self.left = None
@@ -19,4 +28,5 @@ class TreeNode():
     def delete(self, data):
         pass
 
-
+    def contains(self, data):
+        pass

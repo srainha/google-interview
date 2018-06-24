@@ -5,6 +5,15 @@ import dataStructures.Tree
 def fizzBuzz(n):
 	pass
 
+def isPermutations(a, b):
+	pass
+
+def isPalindrome(a, b):
+	pass
+
+def windowAverages(arr, windowSize):
+	pass
+
 # ========= Searching and Sorting =========
 
 def quickSort(n):

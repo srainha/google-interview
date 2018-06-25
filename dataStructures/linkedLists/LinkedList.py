@@ -1,5 +1,4 @@
 class LinkedListNode():
-	# A basic unidirectional node
 
 	def __init__(self, data):
 		self.data = data
@@ -14,12 +13,11 @@ class LinkedList():
 	def addToFront(self, data):
 		if (self.head is None):
 			self.head = LinkedListNode(data)
+			self.last = self.head
 		else:
-
-		if (self.next is None):
-			self.next = LinkedListNode(data)
-		else:
-			self.next.add(data)
+			tempNode = LinkedListNode(data)
+			tempNode.next = self.head
+			self.head = tempNode
 
 	def addToTail(self, data):
 		if (self.head is None):
@@ -28,7 +26,10 @@ class LinkedList():
 			pass
 
 	def delete(self, data):
-		pass
+		if (self.head.data == data):
+			self.head = self.head.next
+		else:
+			self._
 
 	def contains(self, data):
 		pass
@@ -38,7 +39,6 @@ class LinkedList():
 
 
 class DubLinkedListNode():
-	# A basic doubly linked node
 
 	def __init__(self, data):
 		self.data = data

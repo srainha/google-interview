@@ -23,15 +23,19 @@ class Graph(object):
 	def deleteNode(self, data):
 		self.nodes.remove(data)
 		del self.graph[data]
+		for key, value in self.graph.items():
+			if data in value:
+				value.remove(data)
 
 	def deleteEdge(self, fromNode, toNode):
-		pass
+		if (fromNode in self.graph and toNode in self.graph):
+			self.graph[fromNode].remove(toNode)
 
 	def containsNode(self, data):
-		pass
+		return data in self.nodes
 
 	def containsEdge(self, fromNode, toNode):
-		pass
+		return toNode in self.graph[fromNode]
 
 
 class UdGraph(Graph):
@@ -41,4 +45,5 @@ class UdGraph(Graph):
 		self.graph[toNode].add(fromNode)
 
 	def deleteEdge(Self, fromNode, toNode):
-		pass
+		super(UdGraph, self).deleteEdge(fromNode, toNode)
+		self.graph[toNode].remove(fromNode)

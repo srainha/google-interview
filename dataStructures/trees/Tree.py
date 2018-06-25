@@ -32,27 +32,47 @@ class BinaryTree(object):
             else:
                 self._add(data, node.right)
 
+    def find(self, data):
+        if (self.root.data == data):
+            return self.root
+        else:
+            return self._find(data, this.root)
+
+    def _find(self, data, node):
+        if (node.data == data):
+            return node
+        elif (node.left is not None and data <= node.left.data):
+            return self._find(data, node.left)
+        elif (node.right is not None and node.right.data <= data):
+            return self._contains(data, node.right)
+        else:
+            return None
+
+    def findParent(self, data):
+        if (self.root.data == data):
+            return None
+        else:
+            return self._findParent(data, self.root)
+
+    def _findParent(self, data, node):
+        if (node.right is not None)
+        if (node.left is not None)
+
+
     # Deletion: upper=O(n), average=Θ(log(n))
     def delete(self, data):
-        pass
+        node = self.find(data)
+        if (node is not None):
+            if (node.left is None and node.right is None):
+
+        
 
     def deleteTree(self):
         self.root = None
 
     # Search: upper=O(n), average=Θ(log(n))
     def contains(self, data):
-        if (self.root.data == data):
-            return True
-        else:
-            return self._contains(data, self.root)
-
-    def _contains(self, data, node)
-        if (node.data == data):
-            return True
-        if (self.root.data <= data): #check right
-            pass
-        if (val < self.data): # check left
-            if (self.left is not None and )
+        return (self.find(data) is not None)
 
     # Index: upper=O(n), average=Θ(log(n))
     def index(self, data):

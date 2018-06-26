@@ -17,7 +17,12 @@ from BasicAlgorithms import *
 # print(quickSort([1, 2, 3]))
 # print(quickSort([9, 9, 5, 4, 3, 2, 1]))
 
-print(mergeSort([3, 2, 1]))
-print(mergeSort([1, 2 ,3]))
-print(mergeSort([8, 4, 5, 1]))
-print(mergeSort([7, 8, 0, 1, 2, 9]))
+# print(mergeSort([3, 2, 1]))
+# print(mergeSort([1, 2 ,3]))
+# print(mergeSort([8, 4, 5, 1]))
+# print(mergeSort([7, 8, 0, 1, 2, 9]))
+
+# print(binarySearchIt([1,2,3,4,5], 3), 2)
+# print(binarySearchIt([], 3), -1)
+# print(binarySearchIt([1,3,5], 2), -1)
+# print(binarySearchIt([1,2,3,4,5], 1), 0)

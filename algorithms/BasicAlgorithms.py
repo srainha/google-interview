@@ -52,8 +52,19 @@ def linearSearch(arr, val):
 			return a
 	return -1
 
-def binarySearch(arr, val):
-	pass
+def binarySearchIt(arr, val):
+	low = 0
+	high = len(arr) - 1
+	while (low <= high):
+		mid = low + ((high - low) // 2)
+		midValue = arr[mid]
+		if (val == midValue):
+			return mid
+		elif (midValue < val):
+			low = mid + 1
+		else:
+			high = mid - 1
+	return -1
 
 def quickSort(arr):
 	less = []

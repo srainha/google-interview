@@ -1,10 +1,10 @@
-from dataStructures.trees.Tree import *
+# from dataStructures.trees.Tree import *
 
 # ========= Miscallaneous =========
 
 def fizzBuzz(n):
 	print('Starting fizz buzz')
-	for i in xrange(1, n+1):
+	for i in range(1, n+1):
 		if (i % 3 == 0 and i % 5 == 0):
 			print ('fizz buzz')
 		elif (i % 3 == 0):
@@ -14,8 +14,21 @@ def fizzBuzz(n):
 		else:
 			print(i)
 
-def isPermutationString(a, b):
-	pass
+def isPermutationString(aString, bString):
+	if (len(aString) != len(bString)):
+		return False
+	aDict = {}
+	bDict = {}
+	for c in range(len(aString)):
+		if (aString[c] in aDict): 
+			aDict[aString[c]] += 1
+		else:
+			aDict[aString[c]] = 1
+		if (bString[c] in bDict):
+			bDict[bString[c]] += 1
+		else:
+			bDict[bString[c]] = 1 
+	return aDict == bDict
 
 def isPalindromeString(a, b):
 	pass

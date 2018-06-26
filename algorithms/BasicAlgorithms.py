@@ -75,7 +75,7 @@ def quickSort(arr):
 # top down
 # average=O(nlogn)
 def mergeSort(arr):
-	if (len(arr) == 1):
+	if (len(arr) <= 1):
 		return arr
 	left = arr[:int(len(arr)/2)]
 	right = arr[int(len(arr)/2):]
@@ -91,11 +91,10 @@ def merge(left, right):
 		else:
 			result.append(right.pop(0))
 	while (left != []):
-		result.append(left.pop())
+		result.append(left.pop(0))
 	while (right != []):
-		result.append(right.pop())
+		result.append(right.pop(0))
 	return result
-
 
 # ========= Tree Operations =========
 

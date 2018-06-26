@@ -12,10 +12,10 @@ from BasicAlgorithms import *
 # print(isPalindromeString("no", "no"), False)
 # print(isPalindromeString("o", "no"), False)
 
-print(quickSort([3, 2, 1]))
-print(quickSort([1, 4, 6, 2, 0]))
-print(quickSort([1, 2, 3]))
-print(quickSort([9, 9, 5, 4, 3, 2, 1]))
+# print(quickSort([3, 2, 1]))
+# print(quickSort([1, 4, 6, 2, 0]))
+# print(quickSort([1, 2, 3]))
+# print(quickSort([9, 9, 5, 4, 3, 2, 1]))
 
 print(mergeSort([3, 2, 1]))
 print(mergeSort([1, 2 ,3]))

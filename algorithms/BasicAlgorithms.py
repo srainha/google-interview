@@ -31,7 +31,12 @@ def isPermutationString(aString, bString):
 	return aDict == bDict
 
 def isPalindromeString(a, b):
-	pass
+	if (len(a) != len(b)):
+		return False
+	for i in range(len(a)):
+		if (a[i] != b[-i -1]):
+			return False
+	return True
 
 def windowAverages(arr, windowSize):
 	pass
@@ -42,7 +47,10 @@ def fibonacci(n):
 # ========= Searching and Sorting =========
 
 def linearSearch(arr, val):
-	pass
+	for a in range(len(arr)):
+		if (arr[a] == val):
+			return a
+	return -1
 
 def binarySearch(arr, val):
 	pass

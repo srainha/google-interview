@@ -13,7 +13,7 @@ class BinaryTree(object):
     def getRoot(self):
         return self.root
 
-    # Insertion: upper=O(n), average=Θ(log(n))
+    # Insertion: upper=O(n), average=O(log(n))
     def add(self, data):
         if (self.root is None):
             self.root = BinaryTreeNode(data)
@@ -68,7 +68,7 @@ class BinaryTree(object):
         else:
             return None
 
-    # Deletion: upper=O(n), average=Θ(log(n))
+    # Deletion: upper=O(n), average=O(log(n))
     def delete(self, data):
         parent = self.findParent(data)
         if (parent is not None):
@@ -83,6 +83,7 @@ class BinaryTree(object):
                     parent.right = node.right
                 else:
                     # TODO
+                    pass
             else: 
                 node = parent.left
                 if (node.left is None and node.right is None):
@@ -94,14 +95,15 @@ class BinaryTree(object):
                     parent.left = node.right
                 else:
                     # TODO
+                    pass
 
     def deleteTree(self):
         self.root = None
 
-    # Search: upper=O(n), average=Θ(log(n))
+    # Search: upper=O(n), average=O(log(n))
     def contains(self, data):
         return (self.find(data) is not None)
 
-    # Index: upper=O(n), average=Θ(log(n))
+    # Index: upper=O(n), average=O(log(n))
     def index(self, data):
         pass

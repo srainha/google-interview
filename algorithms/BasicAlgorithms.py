@@ -55,11 +55,47 @@ def linearSearch(arr, val):
 def binarySearch(arr, val):
 	pass
 
-def quickSort(n):
-	pass
+def quickSort(arr):
+	less = []
+	equal = []
+	greater = []
 
-def mergeSort(n):
-	pass
+	if (len(arr) <= 1): return arr
+	pivot = arr[0]
+	for x in arr:
+		if x < pivot:
+			less.append(x)
+		elif pivot < x:
+			greater.append(x)
+		else:
+			equal.append(x)
+	return quickSort(less) + equal + quickSort(greater)
+
+
+# top down
+# average=O(nlogn)
+def mergeSort(arr):
+	if (len(arr) == 1):
+		return arr
+	left = arr[:int(len(arr)/2)]
+	right = arr[int(len(arr)/2):]
+	left = mergeSort(left)
+	right = mergeSort(right)
+	return merge(left, right)
+
+def merge(left, right):
+	result = []
+	while (left != [] and right != []):
+		if (left[0] < right[0]):
+			result.append(left.pop(0))
+		else:
+			result.append(right.pop(0))
+	while (left != []):
+		result.append(left.pop())
+	while (right != []):
+		result.append(right.pop())
+	return result
+
 
 # ========= Tree Operations =========
 
@@ -130,7 +166,6 @@ def dfsIt(tree, val):
 			unexplored.append(node.left)
 		if (node.right is not None):
 			unexplored.append(node.right)
-
 
 def dfsRec(treeNode, val):
 	print('DFS at: ' + str(treeNode.data))

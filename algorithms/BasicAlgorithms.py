@@ -38,11 +38,31 @@ def isPalindromeString(a, b):
 			return False
 	return True
 
-def windowAverages(arr, windowSize):
-	pass
+def windowAverages(arr, windowSize=1, exclusive=False):
+	averages = []
+	stepSize = windowSize if exclusive else 1
+	for i in range(0, len(arr), stepSize):
+		upTo = min(len(arr), i + windowSize)
+		averages.append(sum(arr[i:upTo])/(upTo - i))
+	return averages
 
-def fibonacci(n):
-	pass
+def fibonacciRec(n):
+	if (n < 2):
+		return n
+	else:
+		return fibonacciRec(n - 2) + fibonacciRec(n - 1)
+
+def fibonacciIt(n):
+	if (n < 2):
+		return n
+	else:
+		a = 1
+		b = 1
+		for i in range(2, n):
+			temp = b
+			b = temp + a
+			a = temp
+		return b
 
 # ========= Searching and Sorting =========
 
@@ -82,7 +102,6 @@ def quickSort(arr):
 			equal.append(x)
 	return quickSort(less) + equal + quickSort(greater)
 
-
 # top down
 # average=O(nlogn)
 def mergeSort(arr):
@@ -106,6 +125,7 @@ def merge(left, right):
 	while (right != []):
 		result.append(right.pop(0))
 	return result
+
 
 # ========= Tree Operations =========
 
@@ -191,3 +211,11 @@ def dfsRec(treeNode, val):
 		if (node is not None):
 			return node
 	return None
+
+# ========= Linked List Ops ========= 
+
+def hasCycle(lNode):
+	pass
+
+def findMiddle(lNode):
+	pass

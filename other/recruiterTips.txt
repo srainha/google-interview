@@ -1,0 +1,23 @@
+Phone Interview
+	45 minutes
+	Google docs ~ whiteboard
+	1-3 questions
+	Ambiguous/vague 
+	Need to ask clarifying questions
+	Think/explain out loud
+	Mention limitations/corner cases
+		Don't make assumptions/same page as interviewer
+	Algorithms
+		Review basics: bin search, sort, djistras, binary trees (with/wo recursion), search, sort, dfs, bfs, 
+		Always think runtiems and Big O complexity
+		Note: initial solution might not be final solution
+	Data Structures
+		Trees, graphs, linked lists, hash tables, hash maps, arrays, stacks, queues
+	Language specific libraries
+		Data structures, recursive data structures
+	Test coverage
+		Basic test cases for solution
+		2-3 corner case tests
+	Practice on a whiteboard
+	Stay safe from null/redundancy/off-by-1s
+

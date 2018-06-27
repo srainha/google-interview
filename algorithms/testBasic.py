@@ -26,3 +26,21 @@ from BasicAlgorithms import *
 # print(binarySearchIt([], 3), -1)
 # print(binarySearchIt([1,3,5], 2), -1)
 # print(binarySearchIt([1,2,3,4,5], 1), 0)
+
+# print(windowAverages([1,2,3], 1, True), [1, 2, 3])
+# print(windowAverages([1,2,3,4,5], 2, True), [1.5, 3.5, 5])
+# print(windowAverages([1,2,3,4,5], 3, False), [2, 3, 4, 4.5, 5])
+
+# print(fibonacciRec(0))
+# print(fibonacciRec(1))
+# print(fibonacciRec(2))
+# print(fibonacciRec(3))
+# print(fibonacciRec(4))
+# print(fibonacciRec(5))
+
+# print(fibonacciIt(0))
+# print(fibonacciIt(1))
+# print(fibonacciIt(2))
+# print(fibonacciIt(3))
+# print(fibonacciIt(4))
+# print(fibonacciIt(5))

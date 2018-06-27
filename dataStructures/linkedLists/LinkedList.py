@@ -8,12 +8,15 @@ class LinkedList():
 
 	def __init__(self):
 		self.head = None
-		self.last = None
+		self.tail = None
+
+	def add(self, data):
+		self.addToTail(data)
 
 	def addToFront(self, data):
 		if (self.head is None):
 			self.head = LinkedListNode(data)
-			self.last = self.head
+			self.tail = self.head
 		else:
 			tempNode = LinkedListNode(data)
 			tempNode.next = self.head
@@ -22,9 +25,10 @@ class LinkedList():
 	def addToTail(self, data):
 		if (self.head is None):
 			self.head = LinkedListNode(data)
+			self.tail = self.head
 		else:
-			self.last.next = LinkedListNode(data)
-			self.last = self.last.next
+			self.tail.next = LinkedListNode(data)
+			self.tail = self.tail.next
 
 	def delete(self, data):
 		if (self.head.data == data):

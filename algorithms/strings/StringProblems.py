@@ -1,3 +1,4 @@
+import re
 
 def isPermutationString(aString, bString):
 	if (len(aString) != len(bString)):
@@ -38,6 +39,9 @@ def capSentence(s):
 def allPermutations(s):
 	pass
 
-def regexDecimal(s):
-	pass
+def regexDecimal(line):
+	pattern = '^[+-]?(([0-9]+)|([0-9]+\.[0-9]*)|([0-9]*\.[0-9]+))([Ee][+-]?[0-9]+)?$'
+	return (re.match(pattern, line) is not None)
 
+def regexURL(line):
+	pass

@@ -2,11 +2,24 @@ from LinkedList import *
 
 def findCenter(linkedList):
 	node = linkedList.head
-	if (head is None):
-		return head
+	if (node.data is None):
+		return node
 	slow = node
 	fast = node.next
 	while(fast is not None and fast.next is not None):
 		slow = slow.next
 		fast = fast.next.next
 	return slow
+
+def detectCycle(linkedList):
+	node = linkedList.head
+	if (node.data is None or node.next is None):
+		return False
+	slow = node
+	fast = node.next
+	while (fast is not None and fast.next is not None):
+		slow = slow.next
+		fast = fast.next.next
+		if (fast == slow):
+			return True
+	return False

@@ -1,20 +1,20 @@
 class LinkedListNode():
 
-	def __init__(self, data):
+	def __init__(self, data=None):
 		self.data = data
 		self.next = None
 
 class LinkedList():
 
 	def __init__(self):
-		self.head = None
-		self.tail = None
+		self.head = LinkedListNode()
+		self.tail = self.head
 
 	def add(self, data):
 		self.addToTail(data)
 
 	def addToFront(self, data):
-		if (self.head is None):
+		if (self.head.data is None):
 			self.head = LinkedListNode(data)
 			self.tail = self.head
 		else:
@@ -23,7 +23,7 @@ class LinkedList():
 			self.head = tempNode
 
 	def addToTail(self, data):
-		if (self.head is None):
+		if (self.head.data is None):
 			self.head = LinkedListNode(data)
 			self.tail = self.head
 		else:

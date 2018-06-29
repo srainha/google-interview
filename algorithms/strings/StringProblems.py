@@ -33,11 +33,28 @@ def reverseSentence(s):
 def reverseSentenceCasing(s):
 	pass
 
-def capSentence(s):
-	pass
+def cap_lines(text):
+    lines = []
+    line_tokens = text.split('.')
+    for line in line_tokens:
+        word_tokens = line.split()
+        chars = list(word_tokens[0])
+        chars[0] = chars[0].upper()
+        word_tokens[0] = ''.join(chars)
+        lines.append(' '.join(word_tokens))
+    return '. '.join(lines)
 
-def allPermutations(s):
-	pass
+def all_permutations(line):
+    chars = list(line)
+    result = set()
+    for i in range(len(chars)):
+        char = chars[i]
+        sublist = chars[:i] + chars[i+1:]
+        sub_result = all_permutations[''.join(sublist)]
+        for s in sub_result:
+            result.add(char + ''.join(s))
+    return result        
+
 
 def regexDecimal(line):
 	pattern = '^[+-]?(([0-9]+)|([0-9]+\.[0-9]*)|([0-9]*\.[0-9]+))([Ee][+-]?[0-9]+)?$'

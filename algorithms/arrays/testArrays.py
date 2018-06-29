@@ -27,11 +27,10 @@ from ArrayProblems import *
 # print(rotateArray(a, 5), 5)
 # print(rotateArray(a, 10), 10)
 
-
-a = [1,2,3,4,5,6,7,8,9]
+a = [1,2,3,4,5]
 print(a)
-print(rotateArrayInPlace(a, 0), 0)
-print(rotateArrayInPlace(a, 1), 1)
-print(rotateArrayInPlace(a, 2), 2)
-print(rotateArrayInPlace(a, 5), 5)
-print(rotateArrayInPlace(a, 10), 10)
+print(rotate_array(a, 0), 0)
+print(rotate_array(a, 1), 1)
+print(rotate_array(a, 2), 2)
+print(rotate_array(a, 5), 5)
+print(rotate_array(a, 10), 10)

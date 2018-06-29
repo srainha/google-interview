@@ -23,3 +23,13 @@ def detectCycle(linkedList):
 		if (fast == slow):
 			return True
 	return False
+
+def reverse_linked_list(linked_list_node):
+    front = linked_list_node
+    prev_front = linked_list_node
+    while (prev_front.next is not None):
+        next_node = prev_front.next
+        prev_front.next = next_node.next
+        next_node.next = front  
+        front = next_node
+    return front

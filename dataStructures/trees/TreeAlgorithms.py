@@ -85,3 +85,13 @@ def dfsRec(treeNode, val):
 			return node
 	return None
 
+
+def lowest_common_ancestor(treeNode, node_1, node_2):
+    if (treeNode is None):
+        return None
+    if (treeNode.data < node_1.data and treeNode.data < node_2.data):
+        return lowest_common_ancestor(tree_node.right, node_1, node_2)
+    elif (node_1.data < tree_node.data and node_2 < treeNode.data):
+        return lowest_common_ancestor(tree_node.left, node_1, node_2)
+    else:
+        return treeNode

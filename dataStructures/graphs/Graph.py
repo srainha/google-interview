@@ -20,6 +20,12 @@ class Graph(object):
 			self.graph[toNode] = set()
 		self.graph[fromNode].add(toNode)
 
+	def get_nodes(self):
+		return self.nodes
+
+	def get_neighbors(self, node):
+		return self.graph[node]
+
 	def deleteNode(self, data):
 		self.nodes.remove(data)
 		del self.graph[data]
